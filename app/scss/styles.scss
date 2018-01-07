@@ -1,3 +1,8 @@
+@import "_custom-mixins";
+@import "game";
+@import "bootstrap";
+@import "fontawesome";
+
 *{
     margin: 0;
     padding: 0;
@@ -19,15 +24,27 @@ footer{
 }
 
 
+
 .main-cover{
     width: 100%;
     height: 100%;
-    background-image: url('../../dist/images/dota-background.png');
+    background-image: url('../images/dota-background.png');
     background-size: 100% 100%;
     background-position: center;
         
     #hero{
-        width: 100%;
-        
+        text-align: center;
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-56%, -50%);
+        background-color: rgba(0,0,0,0.3);
+        border-radius: 5px;
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 2.5em;
+            padding: 20px;
+        }
     }
 }

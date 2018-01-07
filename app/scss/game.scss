@@ -1,58 +1,58 @@
-*{
+@import "_custom-mixins";
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.clear:after{
+.clear:after {
     content: "";
     display: block;
     clear: both;
 }
 
-html{
+html {
     width: 100%;
     height: 100%;
     background-color: #fff;
     position: relative;
-    
-    body{
+
+    body {
         width: inherit;
         height: inherit;
     }
 }
 
-div#mainCover{
+div#mainCover {
     width: inherit;
     height: inherit;
     position: relative;
-    
-    div#home{
+
+    div#home {
         width: 20%;
         height: 80px;
-//        text-align: center;
+        //        text-align: center;
         float: left;
         background-color: #000;
         position: relative;
-        
-        :hover{
+
+        :hover {
             background-color: #808080;
             color: #0d0d0d;
         }
-        
-        a{
+
+        a {
             text-decoration: none;
             color: #fff;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
             padding: 31px 151px;
+            @include center-item;
         }
     }
-    
-    div#score-field{
+
+    div#score-field {
         background-color: #fff;
         color: #000;
         width: 20%;
@@ -61,23 +61,32 @@ div#mainCover{
         top: 10%;
         text-align: center;
     }
-    
-    div#play{
+
+    div#play {
         width: 60%;
         height: 100%;
         margin: 0 auto;
         background-color: #d3d3d3;
         position: relative;
     }
-    
-    div#letsPlay{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
+    div#letsPlay {
+        @include center-item;
     }
-    
-    div#coolDiv{
+    #restart {
+        background-color: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        @include center-item;
+        font-size: 2em;
+        padding: 30px;
+        border-radius: 50%;
+        display: none;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    div#coolDiv {
         width: 50px;
         height: 50px;
         position: absolute;
