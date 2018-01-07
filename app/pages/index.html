@@ -1,0 +1,23 @@
+<!-- index.nunjucks-->
+{% extends "layout.html" %}
+
+
+{% block content %} 
+<!-- Adds the navigation partial -->
+{% include "partials/navigation.html" %}
+
+
+<main class="main-cover">
+    <div id=hero>
+        <h1>HELLO!</h1>
+    </div>
+</main>
+
+{%include "partials/footer.html"%}
+
+<!--
+{% import 'macros/nav-macro.html' as nav %}
+{{nav.active('home')}}
+-->
+
+{% endblock %}

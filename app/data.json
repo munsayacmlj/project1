@@ -1,0 +1,21 @@
+{
+    "images": [{
+        "src": "./images/bb.png",
+        "alt": "Bristleback"
+    }, {
+        "src": "./images/cm.png",
+        "alt": "Rylai Crestfall"
+    }, {
+        "src": "./images/jugg.png",
+        "alt": "Juggernaut"
+    }, {
+        "src": "./images/lina.png",
+        "alt": "Lina Inverse"
+    }, {
+        "src": "./images/np.png",
+        "alt": "Furion"
+    },{
+        "src": "./images/lc.jpg",
+        "alt": "Legion Commander"
+    }]
+}

@@ -10,12 +10,34 @@ var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var minifyCss = require('gulp-clean-css');
+var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 
 /*Source Variables*/
 var sassSrc = 'app/scss/';
 var imageSrc = 'app/images/';
 var fontsSrc = 'app/fonts/';
 
+
+
+gulp.task('nunjucks', function(){
+    // Gets .html and .nunjucks files in pages folder
+    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    
+    // Adding data to Nunjucks
+    .pipe(data(function(){
+        return require('./app/data.json')
+    }))
+    
+    // Renders template with nunjucks
+    .pipe(nunjucksRender({
+        path: ['app/templates']
+    }))
+    
+    // output files in app folder
+    .pipe(gulp.dest('app'))
+    .pipe(browserSync.stream())
+});
 
 gulp.task('sass', function(){
     return gulp.src(sassSrc + '**/*.scss')
@@ -68,4 +90,8 @@ gulp.task('default', function(callback){
 
 gulp.task('watch', ['browserSync', 'sass'],function(){
     gulp.watch(sassSrc + '**/*.scss', ['sass']);
+    gulp.watch([
+        'app/templates/**/*',
+        'app/pages/**/*',
+        'app/data.json'], ['nunjucks'])
 });

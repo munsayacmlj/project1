@@ -10,7 +10,7 @@
             var thisDiv = $('#coolDiv');
             var np;
             
-            var s = 0xb5ad4eceda1ce2a9;
+            const s = 0xb5ad4eceda1ce2a9;
             var x = 0;
             var w = 0;
             
