@@ -33,27 +33,25 @@ div#mainCover div#home {
   width: 20%;
   height: 80px;
   float: left;
-  background-color: #000;
+  background: -webkit-gradient(linear, left top, right top, from(#603c2d), color-stop(30%, #3f2603), color-stop(76%, #3f2603), to(#7c4f47));
+  background: linear-gradient(to right, #603c2d 0%, #3f2603 30%, #3f2603 76%, #7c4f47 100%);
   position: relative;
-}
-
-div#mainCover div#home :hover {
-  background-color: #808080;
-  color: #0d0d0d;
 }
 
 div#mainCover div#home a {
   text-decoration: none;
-  color: #fff;
   position: absolute;
   text-align: center;
-  padding: 31px 151px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+div#mainCover div#home a :hover {
+  color: #fff;
 }
 
 div#mainCover div#score-field {

@@ -32,23 +32,18 @@ div#mainCover {
     div#home {
         width: 20%;
         height: 80px;
-        //        text-align: center;
         float: left;
-        background-color: #000;
+        background: linear-gradient(to right, #603c2d 0%,#3f2603 30%,#3f2603 76%,#7c4f47 100%);
         position: relative;
-
-        :hover {
-            background-color: #808080;
-            color: #0d0d0d;
-        }
-
         a {
+            
             text-decoration: none;
-            color: #fff;
             position: absolute;
             text-align: center;
-            padding: 31px 151px;
             @include center-item;
+            :hover {
+                color: #fff;
+            }
         }
     }
 

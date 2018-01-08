@@ -33,27 +33,25 @@ div#mainCover div#home {
   width: 20%;
   height: 80px;
   float: left;
-  background-color: #000;
+  background: -webkit-gradient(linear, left top, right top, from(#603c2d), color-stop(30%, #3f2603), color-stop(76%, #3f2603), to(#7c4f47));
+  background: linear-gradient(to right, #603c2d 0%, #3f2603 30%, #3f2603 76%, #7c4f47 100%);
   position: relative;
-}
-
-div#mainCover div#home :hover {
-  background-color: #808080;
-  color: #0d0d0d;
 }
 
 div#mainCover div#home a {
   text-decoration: none;
-  color: #fff;
   position: absolute;
   text-align: center;
-  padding: 31px 151px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+div#mainCover div#home a :hover {
+  color: #fff;
 }
 
 div#mainCover div#score-field {
@@ -12499,34 +12497,113 @@ footer {
 }
 
 #footer {
+  font-family: "Semplicita Pro","Open Sans",Arial,Helvetica,sans-serif;
+  font-weight: 600;
   width: 100%;
-  height: 50px;
+  height: 90px;
   text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(#603c2d), color-stop(30%, #3f2603), color-stop(76%, #3f2603), to(#7c4f47));
+  background: linear-gradient(to right, #603c2d 0%, #3f2603 30%, #3f2603 76%, #7c4f47 100%);
+  color: #f8b700;
+}
+
+#footer span {
+  color: #ebdec2;
+  font-size: 32px;
+  line-height: 90px;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  height: 3em;
+}
+
+.nav-float-right {
+  float: right;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.nav-float-right li a {
+  color: #f8b700;
+}
+
+ul.link-hover li a {
+  text-decoration: none;
+}
+
+ul.link-hover li a :hover {
+  -webkit-text-fill-color: #fff;
+  background-image: none;
+}
+
+.site-link-bg {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.navbar-collapse {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.nav-wrapper {
+  width: 100%;
+}
+
+.list-font li {
+  font-family: "Semplicita Pro","Open Sans",Arial,Helvetica,sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.nav-bg {
+  background: -webkit-gradient(linear, left top, right top, from(#603c2d), color-stop(30%, #3f2603), color-stop(76%, #3f2603), to(#7c4f47));
+  background: linear-gradient(to right, #603c2d 0%, #3f2603 30%, #3f2603 76%, #7c4f47 100%);
 }
 
 .main-cover {
   width: 100%;
   height: 100%;
-  background-image: url("../images/dota-background.png");
+  background-image: url("../images/wow-bg.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
 
-.main-cover #hero {
-  text-align: center;
-  position: absolute;
-  top: 56%;
-  left: 50%;
-  -webkit-transform: translate(-56%, -50%);
-      -ms-transform: translate(-56%, -50%);
-          transform: translate(-56%, -50%);
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+.main-cover .cover-filter {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.main-cover #hero a {
+.main-cover #button-outer {
+  text-align: center;
+  position: absolute;
+  position: absolute;
+  top: 64%;
+  left: 73%;
+  -webkit-transform: translate(-64%, -73%);
+      -ms-transform: translate(-64%, -73%);
+          transform: translate(-64%, -73%);
+  background-color: rgba(159, 22, 0, 0.6);
+  border: 1px solid #ea3012;
+}
+
+.main-cover #button-outer a {
   text-decoration: none;
-  color: white;
+  color: #f7b10a;
   font-size: 2.5em;
   padding: 20px;
+}
+
+.button-enter {
+  border: 1px solid #000;
 }

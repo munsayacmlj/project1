@@ -7,7 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DOTA</title>
+    <title>
+        {%- if title -%}
+        {{title}}
+        {%- else -%}
+        This is the Title
+        {%- endif-%}
+    </title>
 
     <link rel="stylesheet" href="css/styles.css">
 
@@ -16,9 +22,17 @@
 </head>
 
 <body>
+<!--   block navigation-->
+    
+    
 
     <!-- You write code for this content block in another file -->
-    {% block content %} {% endblock %}
+    {% block content %} 
+    {% endblock %}
+    
+    {%block footer%}
+        {% include "partials/footer.html"%}
+    {%endblock%}
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.js"></script>

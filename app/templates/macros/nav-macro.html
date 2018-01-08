@@ -1,11 +1,10 @@
 <!-- nav-macro.nunjucks -->
 
 
-{% macro active(activePage='home') %}
-
+{%- macro active(activePage='home') %}
 <nav>
-    <a href="#" class="{%if activePage == 'home' %} active {% endif %}">Home</a>
-    <a href="#" class="{%if activePage == 'about' %} active {% endif %}">About</a>
-    <a href="#" class="{%if activePage == 'contacts' %} active {% endif %}">Contacts</a>
+    {%- for i in ['home', 'heroes', 'Explore'] %}
+        <a href="{% if activePage == i %}#{% else %}{{i}}.html{% endif %}" class="{% if activePage == i %}active{% endif %}"> {{ i | title }}</a>
+    {%- endfor %}
 </nav>
-{% endmacro %}
+{%- endmacro %}

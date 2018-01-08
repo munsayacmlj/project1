@@ -67,8 +67,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest(cssDist))
 });
 
-
-// Optimize images
+//Optimize images
 gulp.task('images', function () {
     var options = {
         verbose: true
@@ -84,20 +83,28 @@ gulp.task('images', function () {
                 imageminPngquant({
                 quality: 100
             }),
-                imagemin.svgo({
-                plugins: [
-                    {
-                        removeViewBox: true
-                    },
-                    {
-                        cleanupIDs: false
-                    }
-                    ]
-            })
+//                imagemin.svgo({
+//                plugins: [
+//                    {
+//                        removeViewBox: true
+//                    },
+//                    {
+//                        cleanupIDs: false
+//                    }
+//                    ]
+//            })
 
         ], options)))
         .pipe(gulp.dest(imgDist));
 });
+
+//gulp.task('images', function () {
+//    return gulp.src(imageSrc)
+//        .pipe(imagemin({
+//            progressive: true
+//        }))
+//        .pipe(gulp.dest(imgDist));
+//});
 
 // Concat js files
 gulp.task('js', function () {

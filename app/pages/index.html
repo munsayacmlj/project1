@@ -1,23 +1,32 @@
 <!-- index.nunjucks-->
+{# "pages/index.html" #}
+
 {% extends "layout.html" %}
+{% set title='World Of Warcraft' %}
+{# {% block navigation %} 
+    
+    {% import 'macros/nav-macro.html' as nav%}
+    {{nav.active('home')}}
+{% endblock %} #}
 
 
 {% block content %} 
 <!-- Adds the navigation partial -->
-{% include "partials/navigation.html" %}
 
+{% block navigation %}
+<!--        default partials/navigation.html-->
+                {% include "partials/navigation.html"%}
+    
+{%endblock%}
 
 <main class="main-cover">
-    <div id=hero>
-        <a href="game.html">Enter the Game</a>
-    </div>
+        <div class="button-enter">
+            <div id=button-outer>
+                <div class="button-inner">
+                    <div class="button-label">Enter The Game</div>
+                </div>
+            </div>
+         </div>
 </main>
-
-{%include "partials/footer.html"%}
-
-<!--
-{% import 'macros/nav-macro.html' as nav %}
-{{nav.active('home')}}
--->
 
 {% endblock %}
