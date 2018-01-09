@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DOTA</title>
+    <title>World Of Warcraft</title>
 
     <link rel="stylesheet" href="css/styles.css">
 
@@ -16,76 +16,66 @@
 </head>
 
 <body>
+<!--   block navigation-->
+    
+    
 
     <!-- You write code for this content block in another file -->
      
 <!-- Adds the navigation partial -->
-<!-- navigation.nunjucks -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">DOTA</a>
+
+
+<!--        default partials/navigation.html-->
+                <!-- navigation.nunjucks -->
+
+
+<nav class="navbar navbar-expand-lg nav-bg">
+   <div class="nav-wrapper">
+    <a class="navbar-brand logo" href="#"><img src="images/wow-logo.png" height="50"><span id='dota-title'></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <div class="collapse navbar-collapse nav-float-right" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto list-font link-hover">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="site-link-bg text-upper">Home</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Heroes</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Explore
-        </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                <a class="nav-link" href="#"><spam class="site-link-bg text-upper">Heroes</spam></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a href="#" class="nav-link"><spam class="site-link-bg text-upper">Story</spam></a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    </div>
     </div>
 </nav>
 
+    
 
 
 <main class="main-cover">
-    <div id=hero>
-        <a href="game.html">Enter the Game</a>
-    </div>
+        <div class="button-enter">
+            <div id=button-outer>
+                <div class="button-inner">
+                    <div class="button-label">Enter The Game</div>
+                </div>
+            </div>
+         </div>
 </main>
 
-<!-- footer.nunjucks -->
+
+    
+    
+        <!-- footer.nunjucks -->
 
 <footer>
     <div id="footer">
-        <h1>The Adventure Begins Here!</h1>
+        <span class="text-upper">The Adventure Begins Here!</span>
     </div>
 </footer>
-
-<!--
-
-
-
-<nav>
-    <a href="#" class=" active ">Home</a>
-    <a href="#" class="">About</a>
-    <a href="#" class="">Contacts</a>
-</nav>
-
--->
-
-
+    
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
