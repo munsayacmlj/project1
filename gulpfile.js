@@ -6,7 +6,6 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-//var cssnano = require('gulp-cssnano');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
@@ -78,10 +77,10 @@ gulp.task('images', function () {
                 interlaced: true
             }),
                 imageminMozjpeg({
-                quality: 50
+                quality: 100
             }),
                 imageminPngquant({
-                quality: 50
+                quality: 100
             }),
 //                imagemin.svgo({
 //                plugins: [
@@ -156,6 +155,8 @@ gulp.task('fonts', function () {
     return gulp.src(fontsSrc + '**/*')
         .pipe(gulp.dest('dist/fonts'))
 });
+
+
 
 gulp.task('clean', function () {
     return del.sync('dist');
