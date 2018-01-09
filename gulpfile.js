@@ -6,7 +6,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
-var cssnano = require('gulp-cssnano');
+//var cssnano = require('gulp-cssnano');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
@@ -79,10 +79,10 @@ gulp.task('images', function () {
                 interlaced: true
             }),
                 imageminMozjpeg({
-                quality: 100
+                quality: 50
             }),
                 imageminPngquant({
-                quality: 100
+                quality: 50
             }),
                 imagemin.svgo({
                 plugins: [
@@ -108,24 +108,24 @@ gulp.task('js', function () {
 
 
 
-gulp.task('nunjucks', function () {
-    // Gets .html and .nunjucks files in pages folder
-    return gulp.src('app/pages/**/*.+(html|nunjucks)')
-
-        // Adding data to Nunjucks
-        .pipe(data(function () {
-            return require('./app/data.json')
-        }))
-
-        // Renders template with nunjucks
-        .pipe(nunjucksRender({
-            path: ['app/templates']
-        }))
-
-        // output files in app folder
-        .pipe(gulp.dest('app'))
-        .pipe(browserSync.stream())
-});
+//gulp.task('nunjucks', function () {
+//    // Gets .html and .nunjucks files in pages folder
+//    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+//
+//        // Adding data to Nunjucks
+//        .pipe(data(function () {
+//            return require('./app/data.json')
+//        }))
+//
+//        // Renders template with nunjucks
+//        .pipe(nunjucksRender({
+//            path: ['app/templates']
+//        }))
+//
+//        // output files in app folder
+//        .pipe(gulp.dest('app'))
+//        .pipe(browserSync.stream())
+//});
 
 
 gulp.task('browserSync', function () {
